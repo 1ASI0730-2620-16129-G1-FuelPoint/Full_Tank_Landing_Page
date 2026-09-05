@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullTank — Gestión de Combustible B2B en Tiempo Real | FuelPoint</title>
+    <meta name="description"
+        content="FullTank digitaliza la gestión de compraventa de combustible entre empresas industriales y proveedores. Pedidos, pagos, logística y trazabilidad en tiempo real. Sin llamadas, sin Excel, sin errores.">
+    <meta name="keywords"
+        content="gestión combustible, B2B combustible, pedidos combustible, trazabilidad combustible, software combustible Peru">
+    <meta property="og:title" content="FullTank — Gestión de Combustible B2B en Tiempo Real">
+    <meta property="og:description"
+        content="Digitaliza la gestión de combustible B2B. Pedidos, pagos, logística y trazabilidad en tiempo real.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1E3A8A">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="navbar-inner">
+
+            <!-- Logo -->
+            <a href="#inicio" class="navbar-logo" aria-label="FullTank inicio">
+                <img src="img/logo.png" alt="FullTank logo" width="38" height="38" aria-hidden="true">
+                <span class="logo-text">FullTank</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="navbar-links" role="list">
+                <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
+                <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+                <li><a href="#precios" data-i18n="nav.pricing">Precios</a></li>
+                <li><a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a></li>
+                <li><a href="#sobre-nosotros" data-i18n="nav.about">Sobre nosotros</a></li>
+                <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="navbar-actions">
+                <button class="lang-select" id="langBtn" aria-label="Cambiar idioma">
+                    &#127760; ES &#9660;
+                </button>
+                <a href="#contacto" class="btn btn-primary" id="btn-cta-nav"
+                    style="height:40px;padding:0 20px;font-size:14px;" data-i18n="nav.cta">Comenzar ahora</a>
+            </div>
+
+            <!-- Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="navDrawer">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+    <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menú de navegación">
+        <button id="drawerClose" aria-label="Cerrar menú"
+            style="position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;background:transparent;color:var(--text-muted);">
+            &times;
+        </button>
+        <ul class="nav-drawer-links" role="list">
+            <li><a href="#como-funciona" class="drawer-nav-link" data-i18n="nav.how">Cómo funciona</a></li>
+            <li><a href="#beneficios" class="drawer-nav-link" data-i18n="nav.benefits">Beneficios</a></li>
+            <li><a href="#precios" class="drawer-nav-link" data-i18n="nav.pricing">Precios</a></li>
+            <li><a href="#testimonios" class="drawer-nav-link" data-i18n="nav.testimonials">Testimonios</a></li>
+            <li><a href="#sobre-nosotros" class="drawer-nav-link" data-i18n="nav.about">Sobre nosotros</a></li>
+            <li><a href="#contacto" class="drawer-nav-link" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <div class="nav-drawer-actions">
+            <a href="#precios" class="btn btn-primary btn-full drawer-nav-link" data-i18n="nav.cta">Comenzar ahora</a>
+            <button class="lang-select" style="width:100%;justify-content:center;margin-top:8px;"
+                aria-label="Cambiar idioma">&#127760; ES &#9660;</button>
+        </div>
+    </div>
+
+    <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-shapes" aria-hidden="true">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+            <div class="hero-shape hero-shape-4"></div>
+        </div>
+
+        <div class="hero-inner">
+            <!-- Left col -->
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <span class="badge badge-blue" data-i18n-html="hero.badge">&#9201; Gestión de combustible en tiempo real</span>
+                </div>
+
+                <h1 class="fade-in fade-in-delay-1" data-i18n-html="hero.h1">
+                    Deja atrás el <span class="hero-strike">caos</span>.<br>
+                    Gestiona combustible<br>
+                    como un <span class="hero-underline">profesional.</span>
+                </h1>
+
+                <p class="hero-subtitle fade-in fade-in-delay-2" data-i18n="hero.subtitle">
+                    FullTank conecta empresas industriales con sus proveedores de combustible en una plataforma
+                    centralizada. Pedidos, pagos, logística y trazabilidad en tiempo real — sin llamadas, sin Excel, sin errores.
+                </p>
+
+                <ul class="hero-checks fade-in fade-in-delay-3" role="list">
+                    <li><span class="check-emoji">&#10003;</span> <span data-i18n="hero.check1">Sin tarjeta de crédito requerida</span></li>
+                    <li><span class="check-emoji">&#10003;</span> <span data-i18n="hero.check2">Configuración en menos de 10 minutos</span></li>
+                    <li><span class="check-emoji">&#10003;</span> <span data-i18n="hero.check3">Soporte multiidioma incluido</span></li>
+                </ul>
+
+                <div class="hero-ctas fade-in fade-in-delay-4">
+                    <a href="#precios" class="btn btn-primary btn-lg" id="btn-hero-demo" data-i18n="hero.cta">
+                        Solicitar una demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </a>
+                    <button class="btn-play" id="btn-how-it-works"
+                        onclick="document.querySelector('#como-funciona').scrollIntoView({behavior:'smooth',block:'start'})">
+                        <span class="play-icon">
+                            <svg width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+                                <path d="M11 6.134a1 1 0 0 1 0 1.732L2 13a1 1 0 0 1-1.5-.866V1.866A1 1 0 0 1 2 1l9 5.134Z" />
+                            </svg>
+                        </span>
+                        <span data-i18n="hero.play">Ver cómo funciona</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right col — Dashboard mockup -->
+            <div class="hero-visual fade-in fade-in-delay-2">
+                <div class="hero-watermark" aria-hidden="true">
+                    <svg width="260" height="260" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="38" height="38" rx="8" fill="#1E3A8A" />
+                        <rect x="5" y="9" width="28" height="3" rx="1.5" fill="white" />
+                        <rect x="16" y="9" width="3" height="20" rx="1.5" fill="white" />
+                        <circle cx="26" cy="14" r="7" fill="#1E3A8A" stroke="white" stroke-width="1.5" />
+                        <line x1="26" y1="11" x2="26" y2="14" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                        <line x1="26" y1="14" x2="28.5" y2="15.5" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                        <circle cx="26" cy="14" r="0.8" fill="white" />
+                    </svg>
+                </div>
+
+                <div class="dashboard-mockup" role="img" aria-label="Vista previa del dashboard FullTank">
+                    <div class="mockup-header">
+                        <span class="mockup-greeting" data-i18n="mockup.greeting">👋 Buenos días, Carlos</span>
+                        <div class="mockup-right">
+                            <div class="mockup-bell" aria-label="3 notificaciones">
+                                🔔
+                                <span class="bell-dot"></span>
+                            </div>
+                            <div class="mockup-avatar" aria-hidden="true">CR</div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-body">
+                        <div class="mockup-kpis">
+                            <div class="mini-kpi">
+                                <div class="mini-kpi-icon">📦</div>
+                                <div class="mini-kpi-val" style="color:var(--color-primary);">5</div>
+                                <div class="mini-kpi-label" data-i18n="mockup.kpi1">Pedidos activos</div>
+                            </div>
+                            <div class="mini-kpi">
+                                <div class="mini-kpi-icon">⏳</div>
+                                <div class="mini-kpi-val" style="color:var(--color-accent-dark);">2</div>
+                                <div class="mini-kpi-label" data-i18n="mockup.kpi2">Pend. pago</div>
+                            </div>
+                            <div class="mini-kpi">
+                                <div class="mini-kpi-icon">🚛</div>
+                                <div class="mini-kpi-val" style="color:var(--color-info);">1</div>
+                                <div class="mini-kpi-label" data-i18n="mockup.kpi3">En tránsito</div>
+                            </div>
+                            <div class="mini-kpi">
+                                <div class="mini-kpi-icon">✅</div>
+                                <div class="mini-kpi-val" style="color:var(--color-success);">12</div>
+                                <div class="mini-kpi-label" data-i18n="mockup.kpi4">Completados</div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-table-wrap">
+                            <div class="mockup-table-header">
+                                <span data-i18n="mockup.col1">ID</span>
+                                <span data-i18n="mockup.col2">Tipo</span>
+                                <span data-i18n="mockup.col3">Estado</span>
+                            </div>
+                            <div class="mockup-table-row">
+                                <span style="font-weight:600;color:var(--text-primary);">#0042</span>
+                                <span>Diesel B5</span>
+                                <span class="chip chip-approved" data-i18n="mockup.status1">Aprobado</span>
+                            </div>
+                            <div class="mockup-table-row">
+                                <span style="font-weight:600;color:var(--text-primary);">#0041</span>
+                                <span>Gasolina 95</span>
+                                <span class="chip chip-dispatched" data-i18n="mockup.status2">Tránsito</span>
+                            </div>
+                            <div class="mockup-table-row">
+                                <span style="font-weight:600;color:var(--text-primary);">#0040</span>
+                                <span>Diesel B5</span>
+                                <span class="chip chip-pending" data-i18n="mockup.status3">Pendiente</span>
+                            </div>
+                        </div>
+
+                        <div class="mini-chart">
+                            <div class="mini-chart-title" data-i18n="mockup.chart">Consumo mensual (galones)</div>
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="height:40%;background:#DBEAFE;border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" data-i18n="mockup.month1">Nov</span>
+                                </div>
+                                <div class="chart-bar" style="height:55%;background:#BFDBFE;border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" data-i18n="mockup.month2">Dic</span>
+                                </div>
+                                <div class="chart-bar" style="height:70%;background:#93C5FD;border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" data-i18n="mockup.month3">Ene</span>
+                                </div>
+                                <div class="chart-bar" style="height:60%;background:#60A5FA;border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" data-i18n="mockup.month4">Feb</span>
+                                </div>
+                                <div class="chart-bar" style="height:80%;background:#3B82F6;border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" data-i18n="mockup.month5">Mar</span>
+                                </div>
+                                <div class="chart-bar" style="height:100%;background:var(--color-accent);border-radius:4px 4px 0 0;position:relative;">
+                                    <span class="chart-bar-label" style="color:var(--color-accent-dark);font-weight:600;" data-i18n="mockup.month6">Abr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section anchors for the remaining landing page content -->
+    <section id="problema" class="section"><div class="container"><h2 data-i18n="section.problema">The problem</h2></div></section>
+    <section id="como-funciona" class="section"><div class="container"><h2 data-i18n="section.como-funciona">How it works</h2></div></section>
+    <section id="beneficios" class="section"><div class="container"><h2 data-i18n="section.beneficios">Benefits</h2></div></section>
+    <section id="segmentos" class="section"><div class="container"><h2 data-i18n="section.segmentos">Who it is for</h2></div></section>
+    <section id="metricas" class="section"><div class="container"><h2 data-i18n="section.metricas">Metrics</h2></div></section>
+    <section id="sobre-nosotros" class="section"><div class="container"><h2 data-i18n="section.sobre-nosotros">About us</h2></div></section>
+    <section id="equipo" class="section"><div class="container"><h2 data-i18n="section.equipo">Our team</h2></div></section>
+    <section id="testimonios" class="section"><div class="container"><h2 data-i18n="section.testimonios">Testimonials</h2></div></section>
+    <section id="precios" class="section"><div class="container"><h2 data-i18n="section.precios">Plans and pricing</h2></div></section>
+    <section id="faq" class="section"><div class="container"><h2 data-i18n="section.faq">Frequently asked questions</h2></div></section>
+    <section id="formulario" class="section"><div class="container"><h2 data-i18n="section.formulario">Contact form</h2></div></section>
+    <section id="contacto" class="section"><div class="container"><h2 data-i18n="section.contacto">Contact</h2></div></section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
