@@ -1812,3 +1812,317 @@ section[id] { scroll-margin-top: 90px; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .fade-in { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   BLOQUE DE JOAN: social proof, segmentos, métricas y testimonios
+   Pegar al final de style.css, antes de las media queries finales
+   si existieran. Usa los tokens y utilidades que ya están en el
+   archivo (--color-*, --radius-*, .badge, .avatar, .grid-3,
+   .mb-16, .mb-32, .btn-blue, .btn-full), así que no los repite.
+   ============================================================ */
+
+/* ── SOCIAL PROOF ── */
+.social-proof {
+    padding: 28px 0;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.social-proof-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-proof-label {
+    font-size: 11px;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.logos-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo-item {
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    color: #CBD5E1;
+    letter-spacing: 0.04em;
+    transition: color var(--transition-base);
+    cursor: default;
+}
+
+.logo-item:hover {
+    color: var(--color-primary);
+}
+
+/* ── SEGMENTOS ── */
+.dual-segment {
+    background: var(--bg-white);
+}
+
+.dual-segment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.segment-card {
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.segment-card:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-3px);
+}
+
+.segment-card.blue-top {
+    border-top: 4px solid var(--color-primary);
+}
+
+.segment-card.amber-top {
+    border-top: 4px solid var(--color-accent);
+}
+
+.persona-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.persona-name {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-primary);
+}
+
+.persona-role {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.persona-quote {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    padding: 16px;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--border);
+    margin: 16px 0 20px;
+}
+
+.segment-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    border-bottom: 1px dashed var(--border-light);
+}
+
+.check-list li:last-child {
+    border-bottom: none;
+}
+
+.check-list .icon-check {
+    color: var(--color-success);
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ── MÉTRICAS ── */
+.metrics {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    padding: 72px 0;
+}
+
+.metrics .section-header h2 {
+    color: #fff;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.metric-cell {
+    padding: 40px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.metric-cell:last-child {
+    border-right: none;
+}
+
+.metric-number {
+    font-size: clamp(38px, 5vw, 56px);
+    font-weight: var(--fw-bold);
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.metric-label {
+    font-size: var(--fs-sm);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+.metrics-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── TESTIMONIOS ── */
+.testimonials {
+    background: var(--bg-light);
+}
+
+.testimonial-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    padding: 36px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+}
+
+.quote-icon {
+    font-size: 56px;
+    line-height: 1;
+    color: var(--color-primary-pale);
+    font-family: Georgia, serif;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+.testimonial-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.author-info .name {
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+}
+
+.author-info .role {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.testimonials-note {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ── RESPONSIVE DEL BLOQUE ── */
+@media (max-width: 900px) {
+    .dual-segment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .segment-card {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric-cell:nth-child(2n) {
+        border-right: none;
+    }
+
+    .metric-cell:nth-child(1),
+    .metric-cell:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .testimonial-card {
+        padding: 28px 24px;
+    }
+
+    .logos-row {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .metric-cell {
+        padding: 28px 16px;
+    }
+
+    .logo-item {
+        font-size: 13px;
+    }
+}
