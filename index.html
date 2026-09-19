@@ -636,6 +636,289 @@
     <section id="formulario" class="section"><div class="container"><h2 data-i18n="section.formulario">Contact form</h2></div></section>
     <section id="contacto" class="section"><div class="container"><h2 data-i18n="section.contacto">Contact</h2></div></section>
     </main>
+
+ <!-- PRECIOS -->
+    <section id="precios" class="pricing section">
+        <div class="container">
+            <div class="section-header">
+                <span class="label label-blue fade-in" data-i18n="pricing.label">Precios</span>
+                <h2 class="fade-in fade-in-delay-1" data-i18n="pricing.title">Planes que crecen contigo</h2>
+                <p class="fade-in fade-in-delay-2" data-i18n="pricing.subtitle">Comienza Ahora. Escala cuando tu operación lo exija.</p>
+            </div>
+
+            <div class="pricing-toggle fade-in">
+                <div class="toggle-group" role="group" aria-label="Frecuencia de facturación">
+                    <button class="toggle-btn active" data-period="monthly" id="toggle-monthly" data-i18n="pricing.monthly">Mensual</button>
+                    <button class="toggle-btn" data-period="yearly" id="toggle-yearly" data-i18n="pricing.yearly">Anual &mdash; ahorra 20%</button>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card fade-in">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-desc" data-i18n="pricing.starter.desc">Para comenzar</div>
+                    <div class="pricing-price">
+                        <span class="price-amount price-monthly">S/ 120</span>
+                        <span class="price-amount price-yearly" style="display:none;">S/ 96</span>
+                    </div>
+                    <div class="price-period" data-i18n="pricing.starter.period">/ mes</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features" role="list">
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li1">Hasta 20 pedidos/mes</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li2">1 usuario administrador</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li3">Dashboard básico de pedidos</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li4">Notificaciones por email</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li5">Historial últimos 3 meses</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.starter.li6">Soporte por chat (48h)</span></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-full" id="btn-starter" data-i18n="pricing.starter.cta">Comenzar ahora</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card featured fade-in fade-in-delay-1">
+                    <div class="pricing-badge">
+                        <span class="badge badge-amber" data-i18n="pricing.pro.badge">&#9733; Más Popular</span>
+                    </div>
+                    <div class="pricing-tier">Pro</div>
+                    <div class="pricing-desc" data-i18n="pricing.pro.desc">Para operaciones activas</div>
+                    <div class="pricing-price">
+                        <span class="price-amount price-monthly" style="color:#fff;">S/ 299</span>
+                        <span class="price-amount price-yearly" style="display:none;color:#fff;">S/ 239</span>
+                    </div>
+                    <div class="price-period" data-i18n="pricing.pro.period">/ mes por empresa</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features" role="list">
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li1">Pedidos ilimitados</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li2">Hasta 5 usuarios por empresa</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li3">Dashboard con analytics completo</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li4">Notificaciones en tiempo real</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li5">Asignación de vehículos y conductores</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li6">Reportes y exportación PDF</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li7">Historial completo</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.pro.li8">Soporte prioritario (4h)</span></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full" id="btn-pro" data-i18n="pricing.pro.cta">Empezar con el plan Pro</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card fade-in fade-in-delay-2">
+                    <div class="pricing-tier">Enterprise</div>
+                    <div class="pricing-desc" data-i18n="pricing.ent.desc">Para grandes operaciones</div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="pricing.ent.price">A consultar</span>
+                    </div>
+                    <div class="price-period" data-i18n="pricing.ent.period">Precio personalizado</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features" role="list">
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li1">Todo lo del plan Pro, más:</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li2">Usuarios ilimitados</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li3">Integración ERP (SAP, Oracle)</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li4">API REST documentada</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li5">Account manager dedicado</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li6">SLA 99.9% uptime garantizado</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li7">Onboarding personalizado</span></li>
+                        <li><span class="check">&#10003;</span> <span data-i18n="pricing.ent.li8">Capacitación del equipo</span></li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline btn-full" id="btn-enterprise" data-i18n="pricing.ent.cta">Hablar con ventas</a>
+                </div>
+            </div>
+
+            <p class="pricing-note fade-in" data-i18n="pricing.note">
+                &#128274; Todos los planes incluyen SSL, backups diarios y soporte en español.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="fade-in" data-i18n="faq.title">Preguntas frecuentes</h2>
+            </div>
+
+            <div class="faq-container fade-in">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-1-trigger" aria-controls="faq-1-body">
+                        <span data-i18n="faq.q1">¿Necesito instalar algo para usar FullTank?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-1-body" role="region" aria-labelledby="faq-1-trigger">
+                        <p data-i18n="faq.a1">No. Es 100% web. Funciona desde cualquier navegador moderno en computadora, tablet o celular. Sin instalaciones, sin actualizaciones manuales.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-2-trigger" aria-controls="faq-2-body">
+                        <span data-i18n="faq.q2">¿Cómo se gestionan los pagos dentro de la plataforma?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-2-body" role="region" aria-labelledby="faq-2-trigger">
+                        <p data-i18n="faq.a2">El solicitante sube el comprobante de depósito bancario directamente en la plataforma. El proveedor lo valida y aprueba el pedido. FullTank no procesa pagos directamente — actúa como gestor documental del proceso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-3-trigger" aria-controls="faq-3-body">
+                        <span data-i18n="faq.q3">¿Puedo tener varios usuarios en mi empresa?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-3-body" role="region" aria-labelledby="faq-3-trigger">
+                        <p data-i18n="faq.a3">Sí. El plan Starter incluye 1 usuario, el plan Pro hasta 5 y el plan Enterprise tiene usuarios ilimitados con roles y permisos diferenciados por función.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-4-trigger" aria-controls="faq-4-body">
+                        <span data-i18n="faq.q4">¿Mis datos están protegidos?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-4-body" role="region" aria-labelledby="faq-4-trigger">
+                        <p data-i18n="faq.a4">Sí. Usamos autenticación JWT, cifrado SSL en tránsito y backups diarios automáticos. Cumplimos con estándares de seguridad para datos empresariales sensibles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-5-trigger" aria-controls="faq-5-body">
+                        <span data-i18n="faq.q5">¿Se integra con mi sistema ERP actual?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-5-body" role="region" aria-labelledby="faq-5-trigger">
+                        <p data-i18n="faq.a5">El plan Enterprise incluye integración vía API REST documentada con SAP, Oracle y otros sistemas ERP. Nuestro equipo de ingeniería te acompaña en el proceso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" id="faq-6-trigger" aria-controls="faq-6-body">
+                        <span data-i18n="faq.q6">¿En qué idiomas está disponible FullTank?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-body" id="faq-6-body" role="region" aria-labelledby="faq-6-trigger">
+                        <p data-i18n="faq.a6">Actualmente en español e inglés. Puedes cambiar el idioma desde cualquier pantalla con el selector en el navbar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="formulario" class="contact-form-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="label label-blue fade-in" data-i18n="form.label">Contacto</span>
+                <h2 class="fade-in fade-in-delay-1" data-i18n="form.title">Escríbenos</h2>
+                <p class="fade-in fade-in-delay-2" data-i18n="form.subtitle">¿Tienes dudas o quieres más información? Completa el formulario y nuestro equipo se pondrá en contacto contigo.</p>
+            </div>
+
+            <form class="contact-form fade-in" id="contactForm">
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="form-nombre" data-i18n="form.name">Nombre</label>
+                        <input type="text" id="form-nombre" name="nombre" data-i18n-placeholder="form.name.placeholder" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="form-correo" data-i18n="form.email">Correo</label>
+                        <input type="email" id="form-correo" name="correo" data-i18n-placeholder="form.email.placeholder" placeholder="tucorreo@empresa.com" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="form-titulo" data-i18n="form.subject">Título</label>
+                    <input type="text" id="form-titulo" name="titulo" data-i18n-placeholder="form.subject.placeholder" placeholder="Asunto de tu mensaje" required>
+                </div>
+                <div class="form-field">
+                    <label for="form-mensaje" data-i18n="form.message">Mensaje</label>
+                    <textarea id="form-mensaje" name="mensaje" rows="5" data-i18n-placeholder="form.message.placeholder" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" id="form-submit" data-i18n="form.submit">Enviar mensaje</button>
+                <p class="contact-form-note" id="form-note" data-i18n="form.note" hidden>¡Gracias! Hemos recibido tu mensaje.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="cta-final">
+        <div class="container">
+            <div class="cta-final-inner">
+                <h2 class="fade-in" data-i18n-html="cta.title">¿Listo para decirle adiós<br>al caos del combustible?</h2>
+                <p class="cta-final-subtitle fade-in fade-in-delay-1" data-i18n="cta.subtitle">
+                    Únete a más de 200 empresas que ya gestionan sus pedidos de combustible con FullTank. Sin contratos. Sin complicaciones.
+                </p>
+                <div class="fade-in fade-in-delay-2">
+                    <a href="#precios" class="btn btn-white btn-lg" id="btn-cta-final"
+                        style="font-size:17px;height:56px;padding:0 44px;" data-i18n="cta.btn">
+                        Empezar ahora &rarr;
+                    </a>
+                </div>
+                <div class="cta-final-micro fade-in fade-in-delay-3">
+                    <span data-i18n="cta.micro1">Sin tarjeta de crédito</span>
+                    <span class="cta-micro-dot"></span>
+                    <span data-i18n="cta.micro2">Cancela en cualquier momento</span>
+                    <span class="cta-micro-dot"></span>
+                    <span data-i18n="cta.micro3">Soporte en español</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#inicio" class="navbar-logo" style="display:inline-flex;margin-bottom:0;" aria-label="FullTank inicio">
+                        <img src="img/logo.png" alt="FullTank logo" width="36" height="36" aria-hidden="true">
+                        <span class="logo-text" style="color:#fff;">FullTank</span>
+                    </a>
+                    <p data-i18n="footer.desc">Plataforma B2B para la gestión digital de compraventa y distribución de combustible industrial en Perú.</p>
+                    <div class="social-links" role="list" aria-label="Redes sociales">
+                        <a href="#" class="social-link" role="listitem" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" role="listitem" aria-label="Twitter/X">X</a>
+                        <a href="#" class="social-link" role="listitem" aria-label="Instagram">ig</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.col1.title">Producto</h4>
+                    <ul role="list">
+                        <li><a href="#como-funciona" data-i18n="footer.col1.li1">Cómo funciona</a></li>
+                        <li><a href="#beneficios" data-i18n="footer.col1.li2">Beneficios</a></li>
+                        <li><a href="#precios" data-i18n="footer.col1.li3">Planes y precios</a></li>
+                        <li><a href="#precios" data-i18n="footer.col1.li4">Solicitar demo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.col2.title">Empresa</h4>
+                    <ul role="list">
+                        <li><a href="#" data-i18n="footer.col2.li1">Sobre PrimeFuel</a></li>
+                        <li><a href="#" data-i18n="footer.col2.li2">Equipo</a></li>
+                        <li><a href="#" data-i18n="footer.col2.li3">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.col2.li4">Carreras</a></li>
+                        <li><a href="#contacto" data-i18n="footer.col2.li5">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.col3.title">Legal y soporte</h4>
+                    <ul role="list">
+                        <li><a href="docs/centro-de-ayuda.pdf" target="_blank" rel="noopener" data-i18n="footer.col3.li1">Centro de ayuda</a></li>
+                        <li><a href="docs/politica-de-privacidad.pdf" target="_blank" rel="noopener" data-i18n="footer.col3.li2">Política de privacidad</a></li>
+                        <li><a href="docs/terminos-de-servicio.pdf" target="_blank" rel="noopener" data-i18n="footer.col3.li3">Términos de servicio</a></li>
+                        <li><a href="docs/estado-del-sistema.pdf" target="_blank" rel="noopener" data-i18n="footer.col3.li4">Estado del sistema</a></li>
+                        <li><a href="docs/seguridad.pdf" target="_blank" rel="noopener" data-i18n="footer.col3.li5">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span data-i18n="footer.copy">&copy; 2026 PrimeFuel. Todos los derechos reservados.</span>
+                <span data-i18n="footer.made">Hecho en Lima, Per&#250; &#127477;&#127466;</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Volver al inicio">&#8593;</button>
+    
     <script src="main.js"></script>
 </body>
 </html>
