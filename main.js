@@ -61,6 +61,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 4. FAQ ACCORDION
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        const body = item.querySelector('.faq-body');
+
+        trigger?.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+
+            document.querySelectorAll('.faq-item.open').forEach(other => {
+                other.classList.remove('open');
+                other.querySelector('.faq-body')?.classList.remove('open');
+                other.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                item.classList.add('open');
+                body?.classList.add('open');
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // 5. PRICING TOGGLE
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const monthPrices = document.querySelectorAll('.price-monthly');
+    const yearPrices = document.querySelectorAll('.price-yearly');
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const isYearly = btn.dataset.period === 'yearly';
+            monthPrices.forEach(p => p.style.display = isYearly ? 'none' : '');
+            yearPrices.forEach(p => p.style.display = isYearly ? '' : 'none');
+        });
+    });
+
     // 6. INTERSECTION OBSERVER (fade-in)
     const fadeEls = document.querySelectorAll('.fade-in');
 
@@ -113,6 +151,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         counters.forEach(el => countObserver.observe(el));
     }
+
+    // 8. SCROLL TO TOP
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollTopBtn?.classList.add('visible');
+        } else {
+            scrollTopBtn?.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    scrollTopBtn?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 9. NAVBAR ACTIVE LINK
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-links a');
+
+    const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
+            }
+        });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => activeObserver.observe(s));
+
+
+    // 10. LANGUAGE SYSTEM
+    // All translations use data-i18n (textContent) or data-i18n-html (innerHTML)
+    // Symbols use HTML entities in the dictionary (rendered via innerHTML for those keys)
+
 
     const I18N = {
         es: {
@@ -347,4 +423,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Escape' && navDrawer.classList.contains('open')) { closeDrawer(); hamburger.focus(); }
     });
     window.addEventListener('resize', () => { if (window.innerWidth > 1024) closeDrawer(); });
+
+
+    // Attach click to all lang buttons
+    document.querySelectorAll('.lang-select').forEach(btn => {
+        btn.addEventListener('click', () => {
+            applyLanguage(currentLang === 'es' ? 'en' : 'es');
+        });
+    });
+
+    // Init: apply stored language preference on load
+    if (currentLang !== 'es') {
+        applyLanguage(currentLang);
+    }
+
+    // CONTACT FORM (static — no backend, just confirms receipt client-side)
+    const contactForm = document.getElementById('contactForm');
+    const formNote = document.getElementById('form-note');
+
+    contactForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        contactForm.reset();
+        if (formNote) {
+            formNote.hidden = false;
+        }
+    });
 });
